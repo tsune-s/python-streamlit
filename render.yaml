@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: customer-analysis-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run customer_analysis.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0 
